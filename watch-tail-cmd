@@ -1,0 +1,18 @@
+version=1.0.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html &&
+version=1.1.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html &&
+version=1.2.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html &&
+version=2.0.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html &&
+version=2.1.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html &&
+version=2.2.0 && sed -i "s/VERSION/$version/g" index.html && docker build -t 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version . && docker push 640658931148.dkr.ecr.ap-southeast-1.amazonaws.com/helloworld/helloworld-server:$version && sed -i "s/$version/VERSION/g" index.html
+
+
+273076597832
+768669757071
+640658931148
+
+
+watch -n 1 "curl -s http://api.helloworld-v1 | grep -o '<h3>.*</h3>' | tee -a content.txt" &>/dev/null &
+tail -f content.txt
+
+
+sed -i "s/VERSION/$version/g" index.html
