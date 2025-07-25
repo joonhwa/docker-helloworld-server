@@ -10,6 +10,10 @@ jobs:
       - name: 1st Job Step 2
         run: |
           echo "Hello World 2"
+      - name: 1st Job Step 3
+        run: |
+          pwd
+          ls -al
   second-job:
     runs-on: ubuntu-latest
     steps:
