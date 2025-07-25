@@ -7,6 +7,9 @@ jobs:
       - name: 1st Job Step 1
         run: |
           echo "Hello World 1"
+      - name: 1st Job Step 2
+        run: |
+          echo "Hello World 2"
   second-job:
     runs-on: ubuntu-latest
     steps:
