@@ -4,19 +4,13 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: 1st Job Step 1
-        run: |
-          echo "Hello World 1"
-      - name: 1st Job Step 2
-        run: |
-          echo "Hello World 2"
-      - name: 1st Job Step 3
-        run: |
-          pwd
-          ls -al
+      - name: Checkout code
+        uses: actions/checkout@v4
   second-job:
     runs-on: ubuntu-latest
     steps:
       - name: 2nd Job Step 1
         run: |
-          echo "Hello World 2"
+          pwd
+          ls -al
+          node --version
